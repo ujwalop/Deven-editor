@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deven Dekhane</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #000000, #111111);
+            color: #FFD700;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFD700;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #FFD700;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle div {
+            width: 30px;
+            height: 3px;
+            background: #FFD700;
+            margin: 4px 0;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.9);
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                border-radius: 10px;
+                padding: 10px;
+                width: 200px;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+        }
+
+       /* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.hero img {
+    width: 400px;
+    height: auto;
+    display: block;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin: 20px 0;
+    color: #FFD700;
+}
+
+.dynamic-text {
+    font-size: 24px;
+    color: #FFD700;
+    margin-top: 10px;
+    animation: typing 4s steps(30, end), blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #FFD700;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: transparent;
+    }
+    to {
+        border-color: #FFD700;
+    }
+}
+
+        .dynamic-text {
+            font-size: 24px;
+            color: #FFD700;
+            margin-top: 10px;
+            animation: typing 4s steps(30, end), blink 0.5s step-end infinite alternate;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid #FFD700;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            from {
+                border-color: transparent;
+            }
+            to {
+                border-color: #FFD700;
+            }
+        }
+
+        .btn-primary {
+            background-color: #FFD700;
+            color: #000;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .btn-primary:hover {
+            background-color: #FFC300;
+        }
+
+        .projects, .skills {
+            padding: 50px 20px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #FFD700;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .box {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .box h3 {
+            margin-bottom: 10px;
+            color: #FFD700;
+        }
+
+        .box p {
+            color: #ccc;
+        }
+
+        .contact-section {
+            padding: 50px 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFD700;
+            outline: none;
+        }
+
+        .contact-form button {
+            background: #FFD700;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background: #FFC300;
+        }
+
+        
+    footer {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+    color: #FFD700;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+.connect-with {
+    margin-top: 10px;
+}
+
+.connect-with p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #FFD700;
+}
+
+.social-icon {
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+    color: #FFD700;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #FFC300;
+}
+
+.whatsapp {
+    color: #25D366;
+}
+
+.instagram {
+    color: #E4405F;
+}
+
+.threads {
+    color: #1DA1F2; /* Placeholder for Threads */
+}
+
+.linkedin {
+    color: #0077B5;
+}
+    /* Slider Container */
+.slider-container {
+    position: relative;
+    width: 80%;
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Slide */
+.slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+/* Navigation Arrows */
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.navigation .prev, .navigation .next {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.navigation .prev:hover, .navigation .next:hover {
+    background: #FFD700;
+    color: #000;
+}
+
+/* Dots Navigation */
+.dots {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: #FFD700;
+}
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Deven Dekhane</div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</header>
+
+<section id="home" class="hero">
+    <img src="deven.png" alt="Deven">
+    <h1>Deven Dekhane</h1>
+    <div class="dynamic-text">Hey, I am Deven Dekhane, a Video Editor.</div>
+</section>
+
+<section id="projects" class="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="grid">
+        <div class="box">
+            <h3>Project 1</h3>
+            <p>Video Editing for YouTube Channel</p>
+        </div>
+        <div class="box">
+            <h3>Project 2</h3>
+            <p>Short Film Editing</p>
+        </div>
+        <div class="box">
+            <h3>Project 3</h3>
+            <p>Gaming Montage Creation</p>
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="grid">
+        <div class="box">
+            <h3>Davinci Resolve</h3>
+        </div>
+        <div class="box">
+            <h3>Filmora</h3>
+        </div>
+        <div class="box">
+            <h3>CapCut</h3>
+        </div>
+    </div>
+</section>
+    <section class="slider-container">
+    <div class="slider">
+        <div class="slide active">
+            <img src="image1.jpg" alt="Image 1">
+        </div>
+        <div class="slide">
+            <img src="image2.jpg" alt="Image 2">
+        </div>
+        <div class="slide">
+            <img src="image3.jpg" alt="Image 3">
+        </div>
+        <div class="slide">
+            <img src="image4.jpg" alt="Image 4">
+        </div>
+        <div class="slide">
+            <img src="image5.jpg" alt="Image 5">
+        </div>
+        <div class="slide">
+            <img src="image6.jpg" alt="Image 6">
+        </div>
+    </div>
+    <div class="navigation">
+        <div class="prev"><i class="fas fa-chevron-left"></i></div>
+        <div class="next"><i class="fas fa-chevron-right"></i></div>
+    </div>
+    <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+<footer>
+    <p>&copy; 2025 Deven Dekhane. All Rights Reserved.</p>
+    <div class="connect-with">
+        <p>Connect With:</p>
+        <a href="https://wa.me/9324352838" target="_blank" class="social-icon whatsapp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/_mr.devaaa._?igsh=YTFmYTk5bHVvbmNi" target="_blank" class="social-icon instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.threads.net/@_mr.devaaa._" target="_blank" class="social-icon threads">
+            <i class="fab fa-twitter"></i> <!-- Placeholder for Threads -->
+        </a>
+        <a href="https://www.linkedin.com/in/deven-dekhane-23710b2a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-icon linkedin">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const nav = document.querySelector('nav ul');
+        nav.classList.toggle('show');
+    }
+    const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+
+let index = 0;
+
+// Function to show the current slide
+function showSlide(n) {
+    slides.forEach((slide, i) => {
+        slide.style.display = i === n ? 'block' : 'none';
+        dots[i].classList.toggle('active', i === n);
+    });
+}
+
+// Function to move to the next slide
+function nextSlide() {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+}
+
+// Function to move to the previous slide
+function prevSlide() {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+}
+
+// Function to set slide based on dot click
+function setSlide(n) {
+    index = n;
+    showSlide(index);
+}
+
+// Add event listeners for navigation
+next.addEventListener('click', nextSlide);
+prev.addEventListener('click', prevSlide);
+dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => setSlide(i));
+});
+
+// Auto-play slides
+setInterval(nextSlide, 5000); // Change slide every 5 seconds
+
+// Initialize the slider
+showSlide(index);
+</script>
+
+</body>
+</html>
